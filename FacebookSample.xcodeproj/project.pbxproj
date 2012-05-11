@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9016EF2A155CA3E50040E9D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9016EF29155CA3E50040E9D1 /* UIKit.framework */; };
+		9016EF2C155CA3E50040E9D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9016EF2B155CA3E50040E9D1 /* Foundation.framework */; };
+		9016EF2E155CA3E50040E9D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9016EF2D155CA3E50040E9D1 /* CoreGraphics.framework */; };
+		9016EF34155CA3E50040E9D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9016EF32155CA3E50040E9D1 /* InfoPlist.strings */; };
+		9016EF36155CA3E50040E9D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9016EF35155CA3E50040E9D1 /* main.m */; };
+		9016EF3A155CA3E50040E9D1 /* ALAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9016EF39155CA3E50040E9D1 /* ALAppDelegate.m */; };
+		9016EF3D155CA3E50040E9D1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9016EF3B155CA3E50040E9D1 /* MainStoryboard.storyboard */; };
+		9016EF40155CA3E50040E9D1 /* ALViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9016EF3F155CA3E50040E9D1 /* ALViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9016EF25155CA3E50040E9D1 /* FacebookSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9016EF29155CA3E50040E9D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9016EF2B155CA3E50040E9D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9016EF2D155CA3E50040E9D1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9016EF31155CA3E50040E9D1 /* FacebookSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FacebookSample-Info.plist"; sourceTree = "<group>"; };
+		9016EF33155CA3E50040E9D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9016EF35155CA3E50040E9D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9016EF37155CA3E50040E9D1 /* FacebookSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FacebookSample-Prefix.pch"; sourceTree = "<group>"; };
+		9016EF38155CA3E50040E9D1 /* ALAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALAppDelegate.h; sourceTree = "<group>"; };
+		9016EF39155CA3E50040E9D1 /* ALAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALAppDelegate.m; sourceTree = "<group>"; };
+		9016EF3C155CA3E50040E9D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9016EF3E155CA3E50040E9D1 /* ALViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALViewController.h; sourceTree = "<group>"; };
+		9016EF3F155CA3E50040E9D1 /* ALViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9016EF22155CA3E50040E9D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9016EF2A155CA3E50040E9D1 /* UIKit.framework in Frameworks */,
+				9016EF2C155CA3E50040E9D1 /* Foundation.framework in Frameworks */,
+				9016EF2E155CA3E50040E9D1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9016EF1A155CA3E50040E9D1 = {
+			isa = PBXGroup;
+			children = (
+				9016EF2F155CA3E50040E9D1 /* FacebookSample */,
+				9016EF28155CA3E50040E9D1 /* Frameworks */,
+				9016EF26155CA3E50040E9D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9016EF26155CA3E50040E9D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9016EF25155CA3E50040E9D1 /* FacebookSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9016EF28155CA3E50040E9D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9016EF29155CA3E50040E9D1 /* UIKit.framework */,
+				9016EF2B155CA3E50040E9D1 /* Foundation.framework */,
+				9016EF2D155CA3E50040E9D1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9016EF2F155CA3E50040E9D1 /* FacebookSample */ = {
+			isa = PBXGroup;
+			children = (
+				9016EF38155CA3E50040E9D1 /* ALAppDelegate.h */,
+				9016EF39155CA3E50040E9D1 /* ALAppDelegate.m */,
+				9016EF3B155CA3E50040E9D1 /* MainStoryboard.storyboard */,
+				9016EF3E155CA3E50040E9D1 /* ALViewController.h */,
+				9016EF3F155CA3E50040E9D1 /* ALViewController.m */,
+				9016EF30155CA3E50040E9D1 /* Supporting Files */,
+			);
+			path = FacebookSample;
+			sourceTree = "<group>";
+		};
+		9016EF30155CA3E50040E9D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9016EF31155CA3E50040E9D1 /* FacebookSample-Info.plist */,
+				9016EF32155CA3E50040E9D1 /* InfoPlist.strings */,
+				9016EF35155CA3E50040E9D1 /* main.m */,
+				9016EF37155CA3E50040E9D1 /* FacebookSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9016EF24155CA3E50040E9D1 /* FacebookSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9016EF43155CA3E50040E9D1 /* Build configuration list for PBXNativeTarget "FacebookSample" */;
+			buildPhases = (
+				9016EF21155CA3E50040E9D1 /* Sources */,
+				9016EF22155CA3E50040E9D1 /* Frameworks */,
+				9016EF23155CA3E50040E9D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FacebookSample;
+			productName = FacebookSample;
+			productReference = 9016EF25155CA3E50040E9D1 /* FacebookSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9016EF1C155CA3E50040E9D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AL;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 9016EF1F155CA3E50040E9D1 /* Build configuration list for PBXProject "FacebookSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9016EF1A155CA3E50040E9D1;
+			productRefGroup = 9016EF26155CA3E50040E9D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9016EF24155CA3E50040E9D1 /* FacebookSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9016EF23155CA3E50040E9D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9016EF34155CA3E50040E9D1 /* InfoPlist.strings in Resources */,
+				9016EF3D155CA3E50040E9D1 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9016EF21155CA3E50040E9D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9016EF36155CA3E50040E9D1 /* main.m in Sources */,
+				9016EF3A155CA3E50040E9D1 /* ALAppDelegate.m in Sources */,
+				9016EF40155CA3E50040E9D1 /* ALViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9016EF32155CA3E50040E9D1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9016EF33155CA3E50040E9D1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9016EF3B155CA3E50040E9D1 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9016EF3C155CA3E50040E9D1 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9016EF41155CA3E50040E9D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9016EF42155CA3E50040E9D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9016EF44155CA3E50040E9D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FacebookSample/FacebookSample-Prefix.pch";
+				INFOPLIST_FILE = "FacebookSample/FacebookSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9016EF45155CA3E50040E9D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FacebookSample/FacebookSample-Prefix.pch";
+				INFOPLIST_FILE = "FacebookSample/FacebookSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9016EF1F155CA3E50040E9D1 /* Build configuration list for PBXProject "FacebookSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9016EF41155CA3E50040E9D1 /* Debug */,
+				9016EF42155CA3E50040E9D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9016EF43155CA3E50040E9D1 /* Build configuration list for PBXNativeTarget "FacebookSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9016EF44155CA3E50040E9D1 /* Debug */,
+				9016EF45155CA3E50040E9D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9016EF1C155CA3E50040E9D1 /* Project object */;
+}
