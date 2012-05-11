@@ -1,20 +1,39 @@
-//
-//  ALAppDelegate.m
-//  FacebookSample
-//
-//  Created by えいる on 12/05/11.
-//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
-//
+//  Copyright (c) 2012年 Tomohiko Himura. All rights reserved.
+//  http://eiel.info/
+//  http://ios.eiel.info/Facebook
+
 
 #import "ALAppDelegate.h"
 
+// https://developers.facebook.com/apps/ にてアプリケーション作成し、App IDを取得する
+static NSString* FACEBOOK_APP_ID = @"APP_ID";
+
 @implementation ALAppDelegate
 
-@synthesize window = _window;
+@synthesize window = i_window;
+@synthesize facebook = i_facebook;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // APP_ID はfacebookのデベローパーページのアプリケーションの登録をする必要があります。
+    i_facebook = [[Facebook alloc] initWithAppId:FACEBOOK_APP_ID andDelegate:self];
+
+    // 保存してあるアクセストークンがあればとりだす。
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"] 
+        && [defaults objectForKey:@"FBExpirationDateKey"]) {
+        i_facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+        i_facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+    }
+
+    if (![i_facebook isSessionValid]) {
+        // その他の権限 https://developers.facebook.com/docs/authentication/permissions/
+        NSArray *permissions = [[NSArray alloc] initWithObjects:
+                                // @"read_stream",
+                                @"publish_actions",
+                                nil];
+        [i_facebook authorize:permissions];
+    }
     return YES;
 }
 							
@@ -43,6 +62,44 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+// Pre iOS 4.2 support
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [i_facebook handleOpenURL:url]; 
+}
+
+// For iOS 4.2+ support
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [i_facebook handleOpenURL:url]; 
+}
+
+#pragma mark - FBSessionDelegate
+- (void)fbDidLogin {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[i_facebook accessToken] forKey:@"FBAccessTokenKey"];
+    [defaults setObject:[i_facebook expirationDate] forKey:@"FBExpirationDateKey"];
+    [defaults synchronize];
+}
+
+- (void) fbDidLogout {
+    // Remove saved authorization information if it exists
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"]) {
+        [defaults removeObjectForKey:@"FBAccessTokenKey"];
+        [defaults removeObjectForKey:@"FBExpirationDateKey"];
+        [defaults synchronize];
+    }
+}
+
+- (void)fbDidExtendToken:(NSString*)accessToken expiresAt:(NSDate*)expiresAt
+{
+    NSLog(@"token extended");
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:accessToken forKey:@"FBAccessTokenKey"];
+    [defaults setObject:expiresAt forKey:@"FBExpirationDateKey"];
+    [defaults synchronize];
 }
 
 @end

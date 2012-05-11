@@ -1,13 +1,11 @@
-//
-//  ALViewController.h
-//  FacebookSample
-//
-//  Created by えいる on 12/05/11.
-//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
-//
+//  Copyright (c) 2012年 Tomohiko Himura. All rights reserved.
+//  http://eiel.info/
+//  http://ios.eiel.info/Facebook
 
 #import <UIKit/UIKit.h>
+#import "FBRequest.h"
 
-@interface ALViewController : UIViewController
+@interface ALViewController : UIViewController <FBRequestDelegate>
+- (IBAction)tapButton:(id)sender;
 
 @end

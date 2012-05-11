@@ -8,6 +8,7 @@ build/*
 *.mode2v3
 xcuserdata
 Snapshots
+Pods
 
 # old skool
 .svn
